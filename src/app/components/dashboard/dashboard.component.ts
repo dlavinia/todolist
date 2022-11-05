@@ -19,28 +19,41 @@ export class DashboardComponent implements OnInit {
       Validators.maxLength(60),
       Validators.required,
       ])]
-    });
+    })
+    this.load()
   }
   add(){
     const title = this.form.controls['title'].value
     const id = Math.floor(Math.random() * 854)
     this.todos.push(new Todo(id, title, "descricao", false))
+    this.save()
     this.form.reset()
   }
 
+  save(){
+    const data = JSON.stringify(this.todos)
+    localStorage.setItem('todos', data)
+  }
+
+  load(){
+   this.todos = JSON.parse(localStorage.getItem('todos') || '{}')
+  }
   remove(todo: Todo){
     const index = this.todos.indexOf(todo)
     if(index !== -1){
       this.todos.splice(index, 1)
     }
+    this.save()
   }
 
   markAsDone(todo:Todo){
-    todo.done = true;
+    todo.done = true
+    this.save()
   }
 
   markAsUndone(todo: Todo){
-    todo.done = false;
+    todo.done = false
+    this.save()
 
   }
   ngOnInit(): void {

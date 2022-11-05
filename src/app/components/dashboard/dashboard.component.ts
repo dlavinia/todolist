@@ -23,11 +23,14 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  markAsDone(){
-
+  markAsDone(todo:Todo){
+    todo.done = true;
   }
 
-  markAsUndone(){}
+  markAsUndone(todo: Todo){
+    todo.done = false;
+
+  }
   ngOnInit(): void {
   }
 

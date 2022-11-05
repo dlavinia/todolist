@@ -13,12 +13,6 @@ export class DashboardComponent implements OnInit {
   public form: FormGroup
 
   constructor(private formBuilder: FormBuilder){
-
-
-    this.todos.push(new Todo(1, 'Passear com o cachorro', '30 minutos na praça', false))
-    this.todos.push(new Todo(2, 'Ir ao supermercado', 'comprar tomate, cebola e ovos', false))
-    this.todos.push(new Todo(3, 'Cortar o cabelo', 'Amanha às 8h', true))
-    
     this.form = this.formBuilder.group({
       title: ['', Validators.compose([
       Validators.minLength(3),
@@ -26,6 +20,12 @@ export class DashboardComponent implements OnInit {
       Validators.required,
       ])]
     });
+  }
+  add(){
+    const title = this.form.controls['title'].value
+    const id = Math.floor(Math.random() * 854)
+    this.todos.push(new Todo(id, title, "descricao", false))
+    this.form.reset()
   }
 
   remove(todo: Todo){

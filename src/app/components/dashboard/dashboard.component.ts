@@ -15,6 +15,19 @@ export class DashboardComponent implements OnInit {
     this.todos.push(new Todo(2, 'Ir ao supermercado', 'comprar tomate, cebola e ovos', false))
     this.todos.push(new Todo(3, 'Cortar o cabelo', 'Amanha às 8h', true))
   }
+
+  remove(todo: Todo){
+    const index = this.todos.indexOf(todo)
+    if(index !== -1){
+      this.todos.splice(index, 1)
+    }
+  }
+
+  markAsDone(){
+
+  }
+
+  markAsUndone(){}
   ngOnInit(): void {
   }
 

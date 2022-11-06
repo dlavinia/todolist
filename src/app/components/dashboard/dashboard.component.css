@@ -1,3 +1,71 @@
+.container{
+    padding: 1rem;
+}
+.title{
+    color: #089790;
+    font-family: 'Bebas Neue', cursive;
+}
+ul{
+    list-style: none;
+}
+
+ul li div{
+    background-color: #089790;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+}
+ul li div h1{
+    font-size: 22px;
+    color:#fff
+}
+ul li div p{
+    color: #fff;
+}
+ul li div button{
+    border: none;
+    background-color: transparent;
+}
+
+ul li div .btns{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.undone p, .undone h1{
+    text-decoration: line-through;
+}
+.undone li div{
+    background-color: #6EC6CA;
+}
+#sem-tarefa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+#sem-tarefa h2{
+    color: #949393;
+}
+#delete{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    opacity: .6;
+}
+#delete:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 #overlay{
     height: 100vh;
     width: 100%;

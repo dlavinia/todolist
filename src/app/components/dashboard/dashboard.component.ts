@@ -21,18 +21,23 @@ export class DashboardComponent implements OnInit {
     }
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
+    this.load()
   }
 
   markAsDone(todo:Todo){
     todo.done = true
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
+    this.load()
+
   }
 
   markAsUndone(todo: Todo){
     todo.done = false
     const data = JSON.stringify(this.todos)
     localStorage.setItem('todos', data)
+    this.load()
+
 
   }
 

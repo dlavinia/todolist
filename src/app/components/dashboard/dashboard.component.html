@@ -1,18 +1,47 @@
-<h1>{{ title }}</h1>
-<div *ngIf="todos.length==0">
-    <p>Sem tarefas</p>
-</div>
-<ul>
-    <li *ngFor="let todo of todos">
-        <h1> {{todo.title}}</h1>
-        <p>{{todo.description}}</p>
+<div class="container">
+    <h1 class="title"> Tarefas </h1>
+    <div *ngIf="todos.length==0" id="sem-tarefa">
+       <img src="../../../assets/rafiki.svg" alt="check list">
+       <h1 class="title"> Você não possui tarefas</h1>
+       <h2>Adicione uma agora mesmo!</h2>
+    </div>
+    <ul class="cards done">
+        <li *ngFor="let todo of todos" >
+            <div *ngIf="!todo.done">
+                <section>
+                    <h1> {{todo.title}}</h1>
+                    <p>{{todo.description}}</p>
+                </section>
+                <section class="btns">
+                    <button (click)="markAsDone(todo)"> <img src="../../../assets/plus-square.svg"
+                            alt="mark done"></button>
+                    <button (click)="remove(todo)" id="delete"> <img src="../../../assets/delete.svg" width="16px"
+                            alt="delete"></button>
+                </section>
+            </div>
+        </li>
+    </ul>
 
-        <button (click)="markAsDone(todo)" *ngIf="!todo.done"> Concluir</button> |
-        <button (click)="markAsUndone(todo)" *ngIf="todo.done"> Refazer</button> |
-        <button (click)="remove(todo)">Remover</button>
-    </li>
-</ul>
-<button (click)="openModal()"> Adicionar nova + </button>
+    <ul class="cards undone">
+        <li *ngFor="let todo of todos" >
+            <div *ngIf="todo.done">
+                <section>
+                    <h1> {{todo.title}}</h1>
+                    <p>{{todo.description}}</p>
+                </section>
+                <section class="btns">
+                    <button (click)="markAsUndone(todo)"> <img src="../../../assets/check-square.svg"
+                            alt="mark done"></button>
+                    <button (click)="remove(todo)" id="delete"> <img src="../../../assets/delete.svg" width="16px"
+                            alt="delete"></button>
+                </section>
+            </div>
+        </li>
+    </ul>
+   
+
+    <button (click)="openModal()"> Adicionar nova + </button>
+</div>
 
 <section *ngIf="modalOn">
     <app-form></app-form>

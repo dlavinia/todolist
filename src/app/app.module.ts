@@ -7,6 +7,7 @@ import { FooterComponent } from './templates/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './template/form/form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent,
+    FormComponent
+    
   ],
   imports: [
     BrowserModule,

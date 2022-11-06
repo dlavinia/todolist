@@ -1,0 +1,69 @@
+
+form {
+    width: 60%;
+    height: 80vh;
+    background-color: #089790;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+    border-radius: 8px;
+    position: absolute;
+    bottom: 10vh;
+    left: 20%;
+}
+.field{
+    position: relative;
+}
+input, textarea {
+    background-color: transparent;
+    border: solid 2px #fff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    padding: 8px;
+    margin: 20px 0;
+    resize: none;
+    width: 100%;
+}
+
+form button{
+    padding: 8px;
+    background-color: #fff;
+    color: #089790;
+    border: none;
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+label{
+    position: absolute;
+    left: 1rem;
+    top: 1.6rem;
+
+    color: #fff;
+    background-color: #089790;
+    font-size: 20px;
+    transition: all .6s;
+}
+
+small{
+    color: rgb(255, 255, 255);
+}
+
+input:focus-visible, textarea:focus-visible{
+    outline: none;
+}
+
+input:focus-visible ~ label, 
+input:valid ~ label, 
+textarea:focus-visible ~ label,
+textarea:valid ~label{
+    top: 8px;
+    font-size: 14px;
+    transition: all .6s;
+    padding:0 5px;
+
+}

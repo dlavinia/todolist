@@ -3,20 +3,18 @@
     <p>Sem tarefas</p>
 </div>
 <ul>
-    <li *ngFor="let todo of todos"> 
-        {{todo.title}}
-        <button (click)="markAsDone(todo)" *ngIf="!todo.done"> Concluir</button> |  
-        <button (click)="markAsUndone(todo)" *ngIf="todo.done"> Refazer</button> |  
-        <button (click)="remove(todo)">Remover</button></li>
-</ul>
+    <li *ngFor="let todo of todos">
+        <h1> {{todo.title}}</h1>
+        <p>{{todo.description}}</p>
 
-<form [formGroup]="form"> 
-    <label>Tarefa</label>
-    <input 
-        type="text" 
-        placeholder="Titulo" 
-        maxlength="30"
-        formControlName="title">
-    <small *ngIf="form.controls['title'].invalid && !form.controls['title'].pristine">Este campo deve conter entre 3 e 50 caracteres</small>
-    <button (click)="add()" [disabled]="form.invalid">Salvar</button>
-</form>
+        <button (click)="markAsDone(todo)" *ngIf="!todo.done"> Concluir</button> |
+        <button (click)="markAsUndone(todo)" *ngIf="todo.done"> Refazer</button> |
+        <button (click)="remove(todo)">Remover</button>
+    </li>
+</ul>
+<button (click)="openModal()"> Adicionar nova + </button>
+
+<section *ngIf="modalOn">
+    <app-form></app-form>
+    <div id="overlay" (click)="closeModal()">FECHAR</div>
+</section>

@@ -1,0 +1,16 @@
+<section>
+    <form [formGroup]="form">
+        <div class="field">
+            <input type="text" maxlength="30" formControlName="title" required>
+            <label>Título</label>
+            <small *ngIf="form.controls['title'].invalid && !form.controls['title'].pristine">Campo inválido!</small>
+        </div>
+        <div class="field">
+            <textarea rows="20" formControlName="description" required></textarea>
+            <label>Descrição</label>
+            <small *ngIf="form.controls['description'].invalid && !form.controls['description'].pristine">Campo inválido!</small>
+        </div>
+        <button (click)="add()">Adicionar Tarefa</button>
+    </form>
+
+</section>

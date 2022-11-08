@@ -50,7 +50,13 @@ export class DashboardComponent implements OnInit {
   }
 
   load(){
-    this.todos = JSON.parse(localStorage.getItem('todos') || '{}')
+    const todoarray : Todo[] = []
+    
+    const todoParsed = JSON.parse(localStorage.getItem('todos') || '{}')
+    for(let i = 0; i < todoParsed.length; i++){
+      todoarray.push(todoParsed[i])
+    }
+    this.todos = todoarray
    }
   ngOnInit(): void {
   }

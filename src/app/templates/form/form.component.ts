@@ -29,8 +29,16 @@ export class FormComponent implements OnInit {
     const title = this.form.controls['title'].value
     const description = this.form.controls['description'].value
     const id = Math.floor(Math.random() * 854)
-    this.todos = JSON.parse(localStorage.getItem('todos') || '{}')
-    this.todos.push(new Todo(id, title, description, false))
+    const todoForm = new Todo(id, title, description, false)
+    const todoarray : Todo[] = []
+    
+    const todoParsed = JSON.parse(localStorage.getItem('todos') || '{}')
+    for(let i = 0; i < todoParsed.length; i++){
+      todoarray.push(todoParsed[i])
+    }
+    todoarray.push(todoForm)
+    
+    this.todos = todoarray
     this.save()
     this.form.reset()
   }

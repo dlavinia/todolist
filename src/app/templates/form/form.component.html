@@ -10,7 +10,7 @@
             <label>Descrição</label>
             <small *ngIf="form.controls['description'].invalid && !form.controls['description'].pristine">Campo inválido!</small>
         </div>
-        <button class="btn" (click)="add()">Adicionar Tarefa</button>
+        <button class="btn" [disabled]="form.invalid" (click)="add()">Adicionar Tarefa</button>
     </form>
 
 </section>

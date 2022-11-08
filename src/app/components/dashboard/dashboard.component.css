@@ -44,6 +44,7 @@ ul li div .btns{
 .undone li div{
     background-color: #6EC6CA;
 }
+
 #sem-tarefa{
     display: flex;
     flex-direction: column;

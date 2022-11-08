@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './template/form/form.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,15 @@ import { FormComponent } from './template/form/form.component';
     HomeComponent,
     DashboardComponent,
     FooterComponent,
-    FormComponent
+    FormComponent,
+
+
     
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 
 form {
     width: 60%;
-    height: 80vh;
     background-color: #089790;
     padding: 3rem;
     display: flex;
@@ -10,7 +9,7 @@ form {
 
     border-radius: 8px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 18%;
     left: 20%;
 }
 .field{
@@ -27,7 +26,9 @@ input, textarea {
     resize: none;
     width: 100%;
 }
-
+textarea{
+    height: 350px;
+}
 
 label{
     position: absolute;

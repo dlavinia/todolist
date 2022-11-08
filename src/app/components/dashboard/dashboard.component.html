@@ -40,10 +40,10 @@
     </ul>
    
 
-    <button (click)="openModal()"> Adicionar nova + </button>
+    <button id="add" (click)="openModal()" title="Adicionar nova tarefa"> <img src="../../../assets/plus.svg" alt="add"> </button>
 </div>
 
 <section *ngIf="modalOn">
     <app-form></app-form>
-    <div id="overlay" (click)="closeModal()">FECHAR</div>
+    <div id="overlay" (click)="closeModal()"> </div>
 </section>

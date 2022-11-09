@@ -1,4 +1,25 @@
-# Todolist
+<h1> Todolist</h1>
+
+## ⚡ Project
+#### 🏅 First project in Angular!
+In this simple project I learned about the framework structure, Angular CLI, Router, Reactive forms and storing and reading items in localStorage.
+<div align="center">
+<img src="https://raw.githubusercontent.com/dlavinia/todolist/master/src/home.png" width="30%">
+<img src="https://raw.githubusercontent.com/dlavinia/todolist/master/src/dashboard-preview.png" width="30%">
+</div>
+
+
+## 🚀 Technologies
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular](https://angular.io/)
+- [HTML5 e CSS](https://https://html.com/)
+
+
+## 🧩 Layout
+
+- [Learn UIUX : To Do List App](https://www.figma.com/community/file/1015172216261307231)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
@@ -22,6 +43,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<p align="center">
+  <small>Project developed with educational purpose.<small>
+</p>
